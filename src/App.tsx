@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Favorite from "./components/Favorite";
 import Moment from "./components/Moment";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       {/* favorite */}
       <Favorite />
       <Moment />
+      <Footer />
     </div>
   );
 };
