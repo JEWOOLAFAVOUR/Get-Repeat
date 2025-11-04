@@ -14,11 +14,15 @@ const Footer: React.FC = () => {
   return (
     <div className="bg-dark py-12 px-24">
       <div className="flex justify-between mb-5">
-        <img src={icon_white} alt="icon" className="h-12 w-auto" />
+        <img
+          src={icon_white}
+          alt="icon"
+          className="h-12 w-auto cursor-pointer"
+        />
         <div className="flex">
-          <Linkedin className="text-white h-6 w-auto ml-4" />
-          <Instagram className="text-white h-6 w-auto ml-4" />
-          <Twitter className="text-white h-6 w-auto ml-4" />
+          <Linkedin className="text-white h-6 w-auto ml-4 cursor-pointer" />
+          <Instagram className="text-white h-6 w-auto ml-4 cursor-pointer" />
+          <Twitter className="text-white h-6 w-auto ml-4 cursor-pointer" />
         </div>
       </div>
       <div className="flex my-8">
