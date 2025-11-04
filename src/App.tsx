@@ -6,6 +6,7 @@ import Moment from "./components/Moment";
 import Footer from "./components/Footer";
 import Unlock from "./components/Unlock";
 import Readmore from "./components/Readmore";
+import Repeat from "./components/Repeat";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       {/* favorite */}
       <Favorite />
       <Moment />
+      <Repeat />
       <Readmore />
       <Unlock />
       <Footer />
