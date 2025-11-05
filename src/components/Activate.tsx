@@ -1,6 +1,6 @@
 import React from "react";
 import activate_1 from "../assets/images/activate_1.png";
-import { CirclePlay, Clock3 } from "lucide-react";
+import { ArrowRight, CirclePlay, Clock3 } from "lucide-react";
 
 const Activate: React.FC = () => {
   const featuredData = [
@@ -58,7 +58,10 @@ const Activate: React.FC = () => {
         <div className="flex justify-between mt-10">
           {featuredData.map((data) => {
             return (
-              <div key={data.id} className="h-68 w-68 border rounded-2xl p-2">
+              <div
+                key={data.id}
+                className="h-68 w-68 border rounded-2xl p-2 cursor-pointer"
+              >
                 <div className="flex">
                   <CirclePlay className="h-6" />
                   <p className="text-[17px] ml-2">{data.title}</p>
@@ -81,10 +84,22 @@ const Activate: React.FC = () => {
                     );
                   })}
                 </div>
+                <p className="text-[12px] font-light text-black mt-2">
+                  {data.description}
+                </p>
+                <div className="flex mt-2 items-center">
+                  <p className="text-[14px] underline text-black">
+                    Explore this play
+                  </p>
+                  <ArrowRight className="h-4" />
+                </div>
               </div>
             );
           })}
         </div>
+        <p className="text-[17px] underline text-black mt-2 block">
+          Explore more plays
+        </p>
       </div>
     </div>
   );
