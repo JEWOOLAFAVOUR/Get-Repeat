@@ -1,9 +1,9 @@
 import React from "react";
 import { favoriteData } from "./data";
 import { ArrowRight } from "lucide-react";
-import fav_1 from "../assets/images/fav_1.png";
-import fav_2 from "../assets/images/fav_2.png";
-import fav_3 from "../assets/images/fav_3.png";
+// import fav_1 from "../assets/images/fav_1.png";
+// import fav_2 from "../assets/images/fav_2.png";
+// import fav_3 from "../assets/images/fav_3.png";
 
 const Favorite: React.FC = () => {
   return (
