@@ -25,24 +25,24 @@ const Repeat: React.FC = () => {
     },
   ];
   return (
-    <div className="bg-pale py-10 px-80">
+    <div className="bg-pale py-10 px-80 ">
       <h1 className="uppercase text-[40px] font-bold">How repeat works</h1>
-      <div>
+      <div className="mt-5 mr-20">
         {repeatData.map((data) => {
           return (
             <div key={data.id} className="flex mb-5 justify-between">
-              <div className="mr-5">
-                <h1 className="text-[24px] font-bold text-black">
+              <div className="mr-4">
+                <h1 className="text-[24px] font-bold text-black uppercase">
                   {data.title}
                 </h1>
-                <p className="text-[14px] font-light text-black font-montserrat">
+                <p className="text-[16px] font-light text-black font-montserrat">
                   {data.desc}
                 </p>
               </div>
               <img
                 src={data.img}
                 alt="repeat_description"
-                className="h-44 w-120 rounded-sm"
+                className="h-44 w-120 rounded-2xl"
               />
             </div>
           );
