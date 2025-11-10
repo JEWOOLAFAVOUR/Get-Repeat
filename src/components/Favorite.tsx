@@ -20,7 +20,8 @@ const Favorite: React.FC = () => {
           return (
             <div
               key={data.id}
-              className="h-110 sm:w-full lg:w-68 border rounded-2xl mb-8"
+              onClick={() => (window.location.href = data.link)}
+              className="h-115 sm:w-full lg:w-68 border rounded-2xl mb-8 cursor-pointer hover:shadow-md transition-all duration-200"
             >
               <img
                 src={data.slide}
@@ -38,7 +39,10 @@ const Favorite: React.FC = () => {
                 <p className="text-[13px] text-black font-medium block mt-1">
                   {data.author}
                 </p>
-                <div className="mt-1 items-center flex cursor-pointer hover:text-gray-700 transition-all">
+                <div
+                  className="mt-1 items-center flex cursor-pointer hover:text-gray-700 transition-all"
+                  onClick={() => (window.location.href = data.link)}
+                >
                   <p className="text-[13.5px] text-gray-500 font-light">
                     Read more
                   </p>

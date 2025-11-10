@@ -1,31 +1,28 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Favorite from "./components/Favorite";
-import Moment from "./components/Moment";
-import Footer from "./components/Footer";
-import Unlock from "./components/Unlock";
-import Readmore from "./components/Readmore";
-import Repeat from "./components/Repeat";
-import Activate from "./components/Activate";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Moments from "./pages/Moments";
+import Plays from "./pages/Plays";
+import Goals from "./pages/Goals";
+import Examples from "./pages/Examples";
+import Integrations from "./pages/Integrations";
+import Pricing from "./pages/Pricing";
+import StopFocusingLTV from "./pages/StopFocusingLTV";
+import Blog from "./pages/Blog";
 
 const App: React.FC = () => {
   return (
-    <div className="">
-      <div className="h-150 bg-primary px-5 pt-3.5">
-        <Navbar />
-        {/* hero section */}
-        <Hero />
-      </div>
-      {/* favorite */}
-      <Favorite />
-      <Moment />
-      <Activate />
-      <Repeat />
-      <Readmore />
-      <Unlock />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/moments" element={<Moments />} />
+      <Route path="/plays" element={<Plays />} />
+      <Route path="/goals" element={<Goals />} />
+      <Route path="/examples" element={<Examples />} />
+      <Route path="/integrations" element={<Integrations />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/ltv" element={<StopFocusingLTV />} />
+      <Route path="/blog" element={<Blog />} />
+    </Routes>
   );
 };
 

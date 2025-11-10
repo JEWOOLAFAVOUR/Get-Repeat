@@ -8,24 +8,28 @@ const Moment: React.FC = () => {
       title: "Replenishment Moment",
       desc: "Customers in this Moment are ready to buy more of a product they've bought before.",
       type: "Explore replenishment",
+      link: "https://blog.getrepeat.io/dr-squatchs-9-cvr-reordering-experience-on-sms/?_gl=1*3v2k1r*_ga*NzcxMzQzNTg2LjE3NjE4MjMyNzc.*_ga_RT32N17D8W*czE3NjI3NTcyMjQkbzIzJGcxJHQxNzYyNzYwNDk0JGo2MCRsMCRoMA..",
     },
     {
       id: 2,
-      title: "Replenishment Moment",
-      desc: "Customers in this Moment are ready to buy more of a product they've bought before.",
-      type: "Explore replenishment",
+      title: "Cross-sell Moment",
+      desc: "Customers in this Moment are primed to explore more of your product catalog.",
+      type: "Explore cross-sell",
+      link: "https://blog.getrepeat.io/how-kopari-simplified-their-email-flows-with-repeat/?_gl=1*3v2k1r*_ga*NzcxMzQzNTg2LjE3NjE4MjMyNzc.*_ga_RT32N17D8W*czE3NjI3NTcyMjQkbzIzJGcxJHQxNzYyNzYwNDk0JGo2MCRsMCRoMA..",
     },
     {
       id: 3,
-      title: "Replenishment Moment",
-      desc: "Customers in this Moment are ready to buy more of a product they've bought before.",
-      type: "Explore replenishment",
+      title: "About to Lapse Moment",
+      desc: "Customers in this Moment are at risk of lapsing permanently.",
+      type: "Explore lapse prevention",
+      link: "https://blog.getrepeat.io/black-girl-vitamins-improves-margins-by-activating-customers-at-key-retention-moments/?_gl=1*3v2k1r*_ga*NzcxMzQzNTg2LjE3NjE4MjMyNzc.*_ga_RT32N17D8W*czE3NjI3NTcyMjQkbzIzJGcxJHQxNzYyNzYwNDk0JGo2MCRsMCRoMA..",
     },
     {
       id: 4,
-      title: "Replenishment Moment",
-      desc: "Customers in this Moment are ready to buy more of a product they've bought before.",
-      type: "Explore replenishment",
+      title: "Subscription Upsell Moment",
+      desc: "Customers in this Moment are primed to commit to recurring orders.",
+      type: "Explore subscriptions",
+      link: "/moments",
     },
   ];
 
@@ -60,7 +64,14 @@ const Moment: React.FC = () => {
           return (
             <div
               key={data.id}
-              className="p-4 bg-white h-30 rounded-2xl w-100 border mt-5 cursor-pointer"
+              className="p-4 bg-white h-30 rounded-2xl w-100 border mt-5 cursor-pointer hover:shadow-md transition-all duration-200"
+              onClick={() => {
+                if (data.link.startsWith("http")) {
+                  window.location.href = data.link;
+                } else {
+                  window.location.href = data.link;
+                }
+              }}
             >
               <p className="text-[15px] text-black font-medium">{data.title}</p>
               <p className="text-[13px] text-black font-light block mt-2">

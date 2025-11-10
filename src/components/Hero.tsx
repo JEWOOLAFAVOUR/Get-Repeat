@@ -12,7 +12,13 @@ const Hero: React.FC = () => {
         automatically delivering personalized messaging at high-leverage
         Moments.
       </span>
-      <div className="py-4 border bg-white rounded-full flex items-center mt-7 cursor-pointer pl-5 ">
+      <div
+        onClick={() =>
+          (window.location.href =
+            "https://stamped.io/request-demo/?utm_campaign=Repeat%20-%20Stamped%20Demos&utm_source=repeat&utm_medium=landing-page")
+        }
+        className="py-4 border bg-white rounded-full flex items-center mt-7 cursor-pointer pl-5 "
+      >
         <ArrowRight className="text-black mr-3" />
         <span className="text-[33px] font-medium">BOOK A DEMO</span>
       </div>
